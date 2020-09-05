@@ -5,11 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cardflip 1</title>
+    <script src="./jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <div class="card" id="card">
+        <div class="card-inner">
 
+            <div class="card-front">
+                <img src="media/005_Front.png" alt="front-img">
+            </div>
+
+            <div class="card-back">
+                <img src="media/Back.png" alt="back-image">
+            </div>
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#card").click(function() {
+                $(this).toggleClass("active");
+            });
+        });
+    </script>
 </body>
 
 </html>
